@@ -7,7 +7,11 @@ if(uppercase){
 if(reverse){
     processedText = processedText.split('').reverse().join('')
 }
+if(removeSpecialChars){
+    processedText = processedText.replace(/[^a-zA-Z0-9 ]/g, '')
+}
 
 console.log(`Zmieniony tekst: ${processedText}`)
 }
-processText("Witam", {uppercase:true, reverse:true})
+
+processText("Dzień dobry", {uppercase:true, reverse:true, removeSpecialChars:true})
