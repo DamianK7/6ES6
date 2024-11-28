@@ -8,10 +8,12 @@ class Student{
     addGrade(...grades){
         this.grades = [...this.grades, ...grades];
     }
+
     getAverage(){
         if(this.grades.length === 0){
             return 0;
         }
+        
         const sum = this.grades.reduce((total, grade) => total + grade, 0);
         return (sum / this.grades.length).toFixed(2);
     }
