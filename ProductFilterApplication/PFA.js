@@ -16,7 +16,10 @@ const filterProducts = (filters = {}) => {
         console.log(`Produkt: ${name}, Cena: ${price}, Kategoria: ${category}`);
     });
 
+    if(filtered.length === 0){
+        console.log("Brak produktów spełniających kryteria");
+    }
 
 };
 
-filterProducts({category: "Electronics", maxPrice: 1000});
+filterProducts({category: "Electronics", maxPrice: 1});
