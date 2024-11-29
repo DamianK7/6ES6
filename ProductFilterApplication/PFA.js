@@ -3,7 +3,9 @@ const products = [
     {name: "Sofa", price: 500, category: "Furniture"},
     {name: "Fridge", price: 800, category: "Electronics"},
     {name: "Table", price: 250, category: "Furniture"},
-    {name: "Smartphone", price: 900, category: "Electronics"}
+    {name: "Smartphone", price: 900, category: "Electronics"},
+    {name: "Doll", price: 50, category: "Toys"},
+    {name: "Guitar", price: 400, category: "Instruments"}
 ];
 
 const filterProducts = (filters = {}) => {
@@ -22,4 +24,4 @@ const filterProducts = (filters = {}) => {
 
 };
 
-filterProducts({category: "Electronics", maxPrice: 1});
+filterProducts({maxPrice: 500, minPrice:250});
