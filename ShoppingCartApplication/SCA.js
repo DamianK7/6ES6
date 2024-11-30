@@ -30,8 +30,10 @@ class Cart{
 
 }
 const cart = new Cart();
+
 cart.addProduct({name: "Tv", price: 2500, quantity: 1});
 cart.addProduct({name: "Smartphone", price: 900, quantity: 2});
 cart.showCart();
+
 cart.removeProduct("Tv")
 cart.showCart();
