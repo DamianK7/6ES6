@@ -24,9 +24,14 @@ class Cart{
         console.log(`Suma: ${total.toFixed(2)} zł`)
     }
 
+    removeProduct(name){
+        this.products = this.products.filter(product => product.name !== name);
+    }
+
 }
 const cart = new Cart();
 cart.addProduct({name: "Tv", price: 2500, quantity: 1});
 cart.addProduct({name: "Smartphone", price: 900, quantity: 2});
 cart.showCart();
-
+cart.removeProduct("Tv")
+cart.showCart();
