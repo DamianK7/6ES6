@@ -13,6 +13,7 @@ const students = [
     const allScores = students.flatMap(({ scores }) => scores); 
     const maxScore = Math.max(...allScores);
     const minScore = Math.min(...allScores);
+    const above80 = averages.filter(({ average }) => average > 80);
 
     averages.forEach(({ name, average }) =>
         console.log(`Student: ${name}, Średnia wyników: ${average.toFixed(0)}%`)
@@ -20,6 +21,9 @@ const students = [
     
     console.log(`Najwyższy wynik: ${maxScore}%`);
     console.log(`Najniższy wynik: ${minScore}%`);
+    console.log("Studenci z średnim wynikiem wyższym niż 80%:")
+    above80.forEach(({ name, average }) =>
+    console.log(`${name}, ze Średnią: ${average.toFixed(0)}%`))
 };
 
 testScore(students);
